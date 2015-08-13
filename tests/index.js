@@ -1,24 +1,44 @@
 var parallel = require('run-parallel')
 
+function makeBuffer (num) {
+  var buf = new Buffer(10)
+  buf.fill(num)
+  return buf
+}
+
 module.exports = function (test, Store) {
   test('basic put, then get', function (t) {
-    var store = new Store()
-    store.put(0, new Buffer('first chunk'), function (err) {
+    var store = new Store(10)
+    store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, function (err, chunk) {
-        t.error()
-        t.deepEqual(chunk, new Buffer('first chunk'))
+        t.error(err)
+        t.deepEqual(chunk, new Buffer('0123456789'))
+        store.destroy(function (err) {
+          t.error(err)
+          t.end()
+        })
+      })
+    })
+  })
+
+  test('put invalid chunk length gives error', function (t) {
+    var store = new Store(10)
+    store.put(0, new Buffer('0123'), function (err) {
+      t.ok(err instanceof Error)
+      store.destroy(function (err) {
+        t.error(err)
         t.end()
       })
     })
   })
 
   test('concurrent puts, then concurrent gets', function (t) {
-    var store = new Store()
+    var store = new Store(10)
 
     function makePutTask (i) {
       return function (cb) {
-        store.put(i, new Buffer('chunk ' + i), cb)
+        store.put(i, makeBuffer(i), cb)
       }
     }
 
@@ -26,7 +46,7 @@ module.exports = function (test, Store) {
       return function (cb) {
         store.get(i, function (err, data) {
           if (err) return cb(err)
-          t.deepEqual(data, new Buffer('chunk ' + i))
+          t.deepEqual(data, makeBuffer(i))
           cb(null)
         })
       }
@@ -47,30 +67,24 @@ module.exports = function (test, Store) {
 
       parallel(tasks, function (err) {
         t.error(err)
-        t.end()
+        store.destroy(function (err) {
+          t.error(err)
+          t.end()
+        })
       })
     })
   })
 
-  test('get non-existant chunk', function (t) {
-    t.plan(2)
-    var store = new Store()
-    store.get(0, function (err, data) {
-      t.ok(err instanceof Error)
-      t.notOk(data)
-    })
-  })
-
   test('interleaved puts and gets', function (t) {
-    var store = new Store()
+    var store = new Store(10)
     var tasks = []
 
     function makeTask (i) {
       return function (cb) {
-        store.put(i, new Buffer('chunk ' + i), function (err) {
+        store.put(i, makeBuffer(i), function (err) {
           if (err) return cb(err)
           store.get(i, function (err, data) {
-            t.deepEqual(data, new Buffer('chunk ' + i))
+            t.deepEqual(data, makeBuffer(i))
             cb(null)
           })
         })
@@ -83,30 +97,39 @@ module.exports = function (test, Store) {
 
     parallel(tasks, function (err) {
       t.error(err)
-      t.end()
-    })
-  })
-
-  test('get with `offset` and `length` options', function (t) {
-    var store = new Store()
-    store.put(0, new Buffer('first chunk'), function (err) {
-      t.error(err)
-      store.get(0, { offset: 2, length: 3 }, function (err, chunk) {
-        t.error()
-        t.deepEqual(chunk, new Buffer('rst'))
+      store.destroy(function (err) {
+        t.error(err)
         t.end()
       })
     })
   })
 
+  test('get with `offset` and `length` options', function (t) {
+    var store = new Store(10)
+    store.put(0, new Buffer('0123456789'), function (err) {
+      t.error(err)
+      store.get(0, { offset: 2, length: 3 }, function (err, chunk) {
+        t.error()
+        t.deepEqual(chunk, new Buffer('234'))
+        store.destroy(function (err) {
+          t.error(err)
+          t.end()
+        })
+      })
+    })
+  })
+
   test('test for sparsely populated support', function (t) {
-    var store = new Store()
-    store.put(10, new Buffer('this is a chunk'), function (err) {
+    var store = new Store(10)
+    store.put(10, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(10, function (err, chunk) {
         t.error(err)
-        t.deepEqual(chunk, new Buffer('this is a chunk'))
-        t.end()
+        t.deepEqual(chunk, new Buffer('0123456789'))
+        store.destroy(function (err) {
+          t.error(err)
+          t.end()
+        })
       })
     })
   })
