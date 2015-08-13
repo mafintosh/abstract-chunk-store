@@ -24,6 +24,9 @@ Options include:
 }
 ```
 
+If the index doesn't exist in the storage an error should
+be returned
+
 ## License
 
 MIT
