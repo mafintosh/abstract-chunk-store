@@ -1,7 +1,7 @@
 {
   "name": "abstract-chunk-store",
   "version": "0.0.0",
-  "description": "WIP - nothing to see here",
+  "description": "A test suite and interface you can use to implement a chunk based storage backend",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
