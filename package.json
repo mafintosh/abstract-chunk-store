@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "A test suite and interface you can use to implement a chunk based storage backend",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "run-parallel": "^1.1.2"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
