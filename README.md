@@ -8,6 +8,10 @@ npm install abstract-chunk-store
 
 ## API
 
+#### `chunkStore = new ChunkStore(chunkLength)`
+
+Create a new chunk store. Chunks must have a length of `chunkLength`.
+
 #### `chunkStore.put(index, chunkBuffer, [cb])`
 
 Add a new chunk to the storage. Index should be an integer.
