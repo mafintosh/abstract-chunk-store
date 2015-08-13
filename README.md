@@ -35,7 +35,8 @@ they use the same test suite.
 To use the test suite from this module you can `require('abstract-chunk-store/tests')`.
 
 An example of this can be found in the
-[memory-chunk-store](https://github.com/mafintosh/memory-chunk-store) test suite.
+[memory-chunk-store](https://github.com/mafintosh/memory-chunk-store/blob/master/test.js)
+test suite.
 
 To run the tests simply pass your test module (`tap` or `tape` or any other compatible
 modules are supported) and your store's constructor (or a setup function) in:
