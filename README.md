@@ -24,8 +24,17 @@ Options include:
 }
 ```
 
-If the index doesn't exist in the storage an error should
-be returned
+If the index doesn't exist in the storage an error should be returned.
+
+#### `chunkStore.close(cb)`
+
+Close the underlying resource, e.g. if the store is backed by a file, this would close the
+file descriptor.
+
+#### `chunkStore.destroy(cb)`
+
+Destroy the file data, e.g. if the store is backed by a file, this would delete the file
+from the filesystem.
 
 ## Test Suite
 
