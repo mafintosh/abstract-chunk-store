@@ -6,6 +6,13 @@ A test suite and interface you can use to implement a chunk based storage backen
 npm install abstract-chunk-store
 ```
 
+## Some modules that use this
+
+- [memory-chunk-store](https://npmjs.com/package/memory-chunk-store)
+- [fs-chunk-store](https://npmjs.com/package/fs-chunk-store)
+
+Send a PR adding yours if you write a new one
+
 ## API
 
 #### `chunkStore = new ChunkStore(chunkLength)`
