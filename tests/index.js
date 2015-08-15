@@ -133,4 +133,16 @@ module.exports = function (test, Store) {
       })
     })
   })
+
+  test('test `put` without callback - error should be silent', function (t) {
+    var store = new Store(10)
+    store.put(0, new Buffer('01234'))
+    t.end()
+  })
+
+  test('test `put` without callback - success should be silent', function (t) {
+    var store = new Store(10)
+    store.put(0, new Buffer('0123456789'))
+    t.end()
+  })
 }
