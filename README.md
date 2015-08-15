@@ -11,6 +11,7 @@ npm install abstract-chunk-store
 - [memory-chunk-store](https://npmjs.com/package/memory-chunk-store)
 - [fs-chunk-store](https://npmjs.com/package/fs-chunk-store)
 - [immediate-chunk-store](https://npmjs.com/package/immediate-chunk-store)
+- [cache-chunk-store](https://npmjs.com/package/cache-chunk-store)
 
 Send a PR adding yours if you write a new one
 
