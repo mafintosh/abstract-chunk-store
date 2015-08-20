@@ -9,7 +9,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/abstract-chunk-store.git"
+    "url": "git://github.com/mafintosh/abstract-chunk-store.git"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
