@@ -5,7 +5,7 @@
 [downloads-image]: https://img.shields.io/npm/dm/abstract-chunk-store.svg?style=flat
 [downloads-url]: https://npmjs.org/package/abstract-chunk-store
 
-A test suite and interface you can use to implement a chunk based storage backend
+#### A test suite and interface you can use to implement a chunk based storage backend
 
 ```
 npm install abstract-chunk-store
