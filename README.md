@@ -7,7 +7,7 @@
 
 #### A test suite and interface you can use to implement a chunk based storage backend
 
-## install
+## Install
 
 ```
 npm install abstract-chunk-store
@@ -19,8 +19,9 @@ npm install abstract-chunk-store
 - [fs-chunk-store](https://npmjs.com/package/fs-chunk-store)
 - [immediate-chunk-store](https://npmjs.com/package/immediate-chunk-store)
 - [cache-chunk-store](https://npmjs.com/package/cache-chunk-store)
+- [chunk-store-stream](https://npmjs.com/package/chunk-store-stream)
 
-Send a PR adding yours if you write a new one
+Send a PR adding yours if you write a new one.
 
 ## API
 
