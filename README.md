@@ -62,6 +62,11 @@ file descriptor.
 Destroy the file data, e.g. if the store is backed by a file, this would delete the file
 from the filesystem.
 
+#### `chunkStore.chunkLength`
+
+Expose the chunk length from the constructor so that code that receives a chunk
+store can know what size of chunks to write.
+
 ## Test Suite
 
 Publishing a test suite as a module lets multiple modules all ensure compatibility since
