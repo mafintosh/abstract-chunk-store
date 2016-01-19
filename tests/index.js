@@ -145,4 +145,10 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'))
     t.end()
   })
+
+  test('chunkLength property', function (t) {
+    var store = new Store(10)
+    t.equal(store.chunkLength, 10)
+    t.end()
+  })
 }
