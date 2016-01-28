@@ -25,6 +25,7 @@ npm install abstract-chunk-store
 - [fd-chunk-store](https://www.npmjs.com/package/fd-chunk-store)
 - [sparse-chunk-store](https://www.npmjs.com/package/sparse-chunk-store)
 - [ls-chunk-store](https://www.npmjs.com/package/ls-chunk-store)
+- [deferred-chunk-store](https://www.npmjs.com/package/deferred-chunk-store)
 
 Send a PR adding yours if you write a new one.
 
