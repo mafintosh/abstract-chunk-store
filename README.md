@@ -87,6 +87,14 @@ var tests = require('abstract-chunk-store/tests')
 tests(require('tape'), require('your-custom-chunk-store'))
 ```
 
+## Background
+
+An abstract chunk store is a binary data store that allows you to interact with individual chunks of a larger blob (a.k.a. binary file).  A chunk can be thought of as a small partial blob that fits in memory.
+
+Related: 
+
+- [Abstract Blob Store](https://github.com/maxogden/abstract-blob-store)
+
 ## License
 
 MIT
