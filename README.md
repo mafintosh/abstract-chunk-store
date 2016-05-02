@@ -7,6 +7,8 @@
 
 #### A test suite and interface you can use to implement a chunk based storage backend
 
+[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+
 ## Install
 
 ```
@@ -87,11 +89,21 @@ var tests = require('abstract-chunk-store/tests')
 tests(require('tape'), require('your-custom-chunk-store'))
 ```
 
+## Badge
+
+If you make a new module that uses the `abstract-blob-store` API, include this badge in your readme!
+
+[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+
+```md
+[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+```
+
 ## Background
 
 An abstract chunk store is a binary data store that allows you to interact with individual chunks of a larger blob (a.k.a. binary file).  A chunk can be thought of as a small partial blob that fits in memory.
 
-Related: 
+Related:
 
 - [Abstract Blob Store](https://github.com/maxogden/abstract-blob-store)
 
