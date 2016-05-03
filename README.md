@@ -7,7 +7,7 @@
 
 #### A test suite and interface you can use to implement a chunk based storage backend
 
-[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+[![abstract chunk store](https://cdn.rawgit.com/mafintosh/abstract-chunk-store/master/badge.svg)](https://github.com/mafintosh/abstract-chunk-store)
 
 ## Install
 
@@ -93,10 +93,10 @@ tests(require('tape'), require('your-custom-chunk-store'))
 
 If you make a new module that uses the `abstract-blob-store` API, include this badge in your readme!
 
-[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+[![abstract chunk store](https://cdn.rawgit.com/mafintosh/abstract-chunk-store/master/badge.svg)](https://github.com/mafintosh/abstract-chunk-store)
 
 ```md
-[![abstract chunk store](https://raw.githubusercontent.com/mafintosh/abstract-chunk-store/master/badge.png)](https://github.com/mafintosh/abstract-chunk-store)
+[![abstract chunk store](https://cdn.rawgit.com/mafintosh/abstract-chunk-store/master/badge.svg)](https://github.com/mafintosh/abstract-chunk-store)
 ```
 
 ## Background
