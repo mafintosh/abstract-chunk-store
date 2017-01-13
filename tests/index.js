@@ -151,4 +151,12 @@ module.exports = function (test, Store) {
     t.equal(store.chunkLength, 10)
     t.end()
   })
+
+  test('test `get` on non-existent index', function (t) {
+    var store = new Store(10)
+    store.get(0, function (err, chunk) {
+      t.ok(err instanceof Error)
+      t.end()
+    })
+  })
 }
