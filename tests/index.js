@@ -171,4 +171,10 @@ module.exports = function (test, Store) {
       })
     })
   })
+
+  test('must set chunkSize property', function (t) {
+    var store = new Store(10)
+    t.equal(store.chunkSize, 10)
+    t.end()
+  })
 }
