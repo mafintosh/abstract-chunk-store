@@ -137,26 +137,38 @@ module.exports = function (test, Store) {
   test('test `put` without callback - error should be silent', function (t) {
     var store = new Store(10)
     store.put(0, new Buffer('01234'))
-    t.end()
+    store.destroy(function (err) {
+      t.error(err)
+      t.end()
+    })
   })
 
   test('test `put` without callback - success should be silent', function (t) {
     var store = new Store(10)
     store.put(0, new Buffer('0123456789'))
-    t.end()
+    store.destroy(function (err) {
+      t.error(err)
+      t.end()
+    })
   })
 
   test('chunkLength property', function (t) {
     var store = new Store(10)
     t.equal(store.chunkLength, 10)
-    t.end()
+    store.destroy(function (err) {
+      t.error(err)
+      t.end()
+    })
   })
 
   test('test `get` on non-existent index', function (t) {
     var store = new Store(10)
     store.get(0, function (err, chunk) {
       t.ok(err instanceof Error)
-      t.end()
+      store.destroy(function (err) {
+        t.error(err)
+        t.end()
+      })
     })
   })
 }
