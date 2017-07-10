@@ -171,4 +171,21 @@ module.exports = function (test, Store) {
       })
     })
   })
+
+  test('test empty store\'s `close` calls its callback', function (t) {
+    var store = new Store(10)
+    store.close(function (err) {
+      t.error(err)
+      t.end()
+    })
+  })
+
+  test('test non-empty store\'s `close` calls its callback', function (t) {
+    var store = new Store(10)
+    store.put(0, new Buffer('0123456789'))
+    store.close(function (err) {
+      t.error(err)
+      t.end()
+    })
+  })
 }
