@@ -92,7 +92,7 @@ tests(require('tape'), require('your-custom-chunk-store'))
 
 ## Badge
 
-If you make a new module that uses the `abstract-blob-store` API, include this badge in your readme!
+If you make a new module that uses the `abstract-chunk-store` API, include this badge in your readme!
 
 [![abstract chunk store](https://cdn.rawgit.com/mafintosh/abstract-chunk-store/master/badge.svg)](https://github.com/mafintosh/abstract-chunk-store)
 
