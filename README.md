@@ -30,6 +30,7 @@ npm install abstract-chunk-store
 - [deferred-chunk-store](https://www.npmjs.com/package/deferred-chunk-store)
 - [indexeddb-chunk-store](https://www.npmjs.com/package/indexeddb-chunk-store)
 - [idb-chunk-store](https://www.npmjs.com/package/idb-chunk-store)
+- [idbkv-chunk-store](https://www.npmjs.com/package/idbkv-chunk-store)
 - [cache-storage-chunk-store](https://www.npmjs.com/package/cache-storage-chunk-store)
 
 Send a PR adding yours if you write a new one.
