@@ -109,7 +109,7 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, { offset: 2, length: 3 }, function (err, chunk) {
-        t.error()
+        t.error(err)
         t.deepEqual(chunk, new Buffer('234'))
         store.destroy(function (err) {
           t.error(err)
@@ -124,7 +124,7 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, null, function (err, chunk) {
-        t.error()
+        t.error(err)
         t.deepEqual(chunk, new Buffer('0123456789'))
         store.destroy(function (err) {
           t.error(err)
@@ -139,7 +139,7 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, {}, function (err, chunk) {
-        t.error()
+        t.error(err)
         t.deepEqual(chunk, new Buffer('0123456789'))
         store.destroy(function (err) {
           t.error(err)
@@ -154,7 +154,7 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, { offset: 2 }, function (err, chunk) {
-        t.error()
+        t.error(err)
         t.deepEqual(chunk, new Buffer('23456789'))
         store.destroy(function (err) {
           t.error(err)
@@ -169,7 +169,7 @@ module.exports = function (test, Store) {
     store.put(0, new Buffer('0123456789'), function (err) {
       t.error(err)
       store.get(0, { length: 5 }, function (err, chunk) {
-        t.error()
+        t.error(err)
         t.deepEqual(chunk, new Buffer('01234'))
         store.destroy(function (err) {
           t.error(err)
