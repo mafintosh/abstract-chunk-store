@@ -84,6 +84,7 @@ module.exports = function (test, Store) {
         store.put(i, makeBuffer(i), function (err) {
           if (err) return cb(err)
           store.get(i, function (err, data) {
+            t.error(err)
             t.deepEqual(data, makeBuffer(i))
             cb(null)
           })
