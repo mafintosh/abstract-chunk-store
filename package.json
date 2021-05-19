@@ -6,7 +6,12 @@
   "dependencies": {
     "run-parallel": "^1.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
+  "scripts": {
+    "test": "standard"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mafintosh/abstract-chunk-store.git"
