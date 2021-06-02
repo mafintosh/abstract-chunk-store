@@ -1,7 +1,7 @@
 # abstract-chunk-store [![ci][ci-image]][ci-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
 
-[ci-image]: https://img.shields.io/github/workflow/status/mafintosh/cache-chunk-store/ci/master
-[ci-url]: https://github.com/mafintosh/cache-chunk-store/actions
+[ci-image]: https://img.shields.io/github/workflow/status/mafintosh/abstract-chunk-store/ci/master
+[ci-url]: https://github.com/mafintosh/abstract-chunk-store/actions
 [npm-image]: https://img.shields.io/npm/v/abstract-chunk-store.svg?style=flat
 [npm-url]: https://npmjs.org/package/abstract-chunk-store
 [downloads-image]: https://img.shields.io/npm/dm/abstract-chunk-store.svg?style=flat
