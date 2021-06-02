@@ -19,11 +19,21 @@ npm install abstract-chunk-store
 
 ## Some modules that use this
 
+Recommended chunk stores:
+
 - [memory-chunk-store](https://npmjs.com/package/memory-chunk-store)
 - [fs-chunk-store](https://npmjs.com/package/fs-chunk-store)
+- [idb-chunk-store](https://www.npmjs.com/package/idb-chunk-store)
+- [fs-access-chunk-store](https://www.npmjs.com/package/fs-access-chunk-store)
+
+Recommended chunk store utilities:
+
 - [immediate-chunk-store](https://npmjs.com/package/immediate-chunk-store)
 - [cache-chunk-store](https://npmjs.com/package/cache-chunk-store)
 - [chunk-store-stream](https://npmjs.com/package/chunk-store-stream)
+
+Other modules that follow the chunk store spec:
+
 - [chunk-store-multi-get](https://npmjs.com/package/chunk-store-multi-get)
 - [abstract-chunk-transport](https://npmjs.com/package/abstract-chunk-transport)
 - [fd-chunk-store](https://www.npmjs.com/package/fd-chunk-store)
@@ -31,7 +41,6 @@ npm install abstract-chunk-store
 - [ls-chunk-store](https://www.npmjs.com/package/ls-chunk-store)
 - [deferred-chunk-store](https://www.npmjs.com/package/deferred-chunk-store)
 - [indexeddb-chunk-store](https://www.npmjs.com/package/indexeddb-chunk-store)
-- [idb-chunk-store](https://www.npmjs.com/package/idb-chunk-store)
 - [idbkv-chunk-store](https://www.npmjs.com/package/idbkv-chunk-store)
 - [cache-storage-chunk-store](https://www.npmjs.com/package/cache-storage-chunk-store)
 
