@@ -43,6 +43,7 @@ Other modules that follow the chunk store spec:
 - [indexeddb-chunk-store](https://www.npmjs.com/package/indexeddb-chunk-store)
 - [idbkv-chunk-store](https://www.npmjs.com/package/idbkv-chunk-store)
 - [cache-storage-chunk-store](https://www.npmjs.com/package/cache-storage-chunk-store)
+- [replit-chunk-store](https://www.npmjs.com/package/replit-chunk-store)
 
 Send a PR adding yours if you write a new one.
 
