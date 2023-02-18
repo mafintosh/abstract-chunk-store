@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/mafintosh/abstract-chunk-store/issues"
   },
-  "homepage": "https://github.com/mafintosh/abstract-chunk-store"
+  "homepage": "https://github.com/mafintosh/abstract-chunk-store",
+  "types": "index.d.ts"
 }
